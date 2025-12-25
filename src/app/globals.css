@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    /* Gunakan warna hex atau rgb langsung jika @apply error */
+    background-color: #f8fafc; /* Sama dengan bg-slate-50 */
+    color: #0f172a;           /* Sama dengan text-slate-900 */
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Animasi halus untuk transisi soal */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar untuk Question Map */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
